@@ -28,15 +28,13 @@ It monitors a given folder for **file creations, deletions, and modifications**,
 
 ## 📂 Project Structure
 
-FileIntegrityMonitor_Web/
-│── app.py # Main Python app (Flask + file monitor)
-│── templates/
-│ └── index.html # Web dashboard template (auto-refresh)
-│── logs.txt # Change logs (auto-created)
-│── test_folder/ # Folder to monitor
----
-
----
+File_Integrity_Monitor/
+│
+├── 📂 test_folder/              # For monitoring folder
+├──  app.py                      # Flask/FastAPI backend API
+├── log.txt
+├── 📂 templates/                  
+│   ├── index.html
 
 ## 🚀 Setup & Run
 
@@ -61,6 +59,7 @@ python app.py
 Open your browser and go to:
 
 http://127.0.0.1:5000
+
 ---
 The dashboard will auto-refresh every 5 seconds to display the latest changes.
 
@@ -72,7 +71,9 @@ Create a new file → Dashboard shows File Created.
 Edit an existing file → Dashboard shows File Modified.
 
 Delete a file → Dashboard shows File Deleted.
+
 ---
+
 📜 How It Works
 Uses Watchdog to listen for file system events in test_folder.
 
