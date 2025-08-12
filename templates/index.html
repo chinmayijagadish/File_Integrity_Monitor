@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Integrity Monitor</title>
+    <meta http-equiv="refresh" content="5"> <!-- Refresh every 5 seconds -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>File Integrity Monitor</h1>
+    <p>Monitoring changes in <b>test_folder</b></p>
+    <p>Last updated: {{ logs|length }} events detected</p>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Action</th>
+            <th>File Path</th>
+        </tr>
+        {% for log in logs %}
+        {% set parts = log.split('] ') %}
+        {% if parts|length > 1 %}
+        <tr>
+            <td>{{ parts[0].strip('[') }}</td>
+            <td>{{ parts[1].split(': ')[0] }}</td>
+            <td>{{ parts[1].split(': ')[1] }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+</body>
+</html>
