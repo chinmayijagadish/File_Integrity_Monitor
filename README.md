@@ -53,8 +53,6 @@ Open your browser and go to:
 
 http://127.0.0.1:5000
 
----
-
 The dashboard will auto-refresh every 5 seconds to display the latest changes.
 
 🧪 Testing the Monitor
@@ -69,6 +67,7 @@ Delete a file → Dashboard shows File Deleted.
 ---
 
 📜 How It Works
+
 Uses Watchdog to listen for file system events in test_folder.
 
 Calculates SHA256 hash of each file to detect content changes.
