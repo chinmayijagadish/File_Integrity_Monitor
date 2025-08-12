@@ -56,40 +56,33 @@ http://127.0.0.1:5000
 The dashboard will auto-refresh every 5 seconds to display the latest changes.
 
 🧪 Testing the Monitor
-Open the test_folder.
 
-Create a new file → Dashboard shows File Created.
-
-Edit an existing file → Dashboard shows File Modified.
-
-Delete a file → Dashboard shows File Deleted.
+- Open the test_folder.
+- Create a new file → Dashboard shows File Created.
+- Edit an existing file → Dashboard shows File Modified.
+- Delete a file → Dashboard shows File Deleted.
 
 ---
 
 📜 How It Works
 
-Uses Watchdog to listen for file system events in test_folder.
-
-Calculates SHA256 hash of each file to detect content changes.
-
-Logs all changes to logs.txt.
-
-Flask serves the log data in a web interface with auto-refresh.
+- Uses Watchdog to listen for file system events in test_folder.
+- Calculates SHA256 hash of each file to detect content changes.
+- Logs all changes to logs.txt.
+- Flask serves the log data in a web interface with auto-refresh.
 
 🔮 Future Work
-📩 Email & Telegram alerts for critical file changes.
+- 📩 Email & Telegram alerts for critical file changes.
+- 📊 Search and filter options in the web UI to find specific events.
+- 📥 Export logs as CSV or PDF for reporting purposes.
 
-📊 Search and filter options in the web UI to find specific events.
+- 📂 Multi-folder monitoring support.
 
-📥 Export logs as CSV or PDF for reporting purposes.
+   - 🗄 Database storage (SQLite/MySQL) instead of plain text logs.
 
-📂 Multi-folder monitoring support.
+   - 🔐 User authentication for secure web access.
 
-🗄 Database storage (SQLite/MySQL) instead of plain text logs.
-
-🔐 User authentication for secure web access.
-
-🌍 Remote monitoring over the internet with secure access control.
+   - 🌍 Remote monitoring over the internet with secure access control.
 
 ⚠️ Disclaimer
 This tool is for educational and testing purposes only.
