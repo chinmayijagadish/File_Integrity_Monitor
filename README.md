@@ -32,10 +32,9 @@ It monitors a given folder for **file creations, deletions, and modifications**,
 Make sure Python 3 is installed. Then, open a terminal in the project folder and run:
 ```bash
 pip install flask watchdog
-
+```
 ---
 
-```
 2️⃣ Prepare the Project Folder
 Create a folder named test_folder in the project directory.
 
