@@ -26,16 +26,6 @@ It monitors a given folder for **file creations, deletions, and modifications**,
 
 ---
 
-## 📂 Project Structure
-
-File_Integrity_Monitor/
-│
-├── 📂 test_folder/              # For monitoring folder
-├──  app.py                      # Flask/FastAPI backend API
-├── log.txt
-├── 📂 templates/                  
-│   ├── index.html
-
 ## 🚀 Setup & Run
 
 ### 1️⃣ Install Requirements
@@ -44,6 +34,7 @@ Make sure Python 3 is installed. Then, open a terminal in the project folder and
 pip install flask watchdog
 
 ---
+
 ```
 2️⃣ Prepare the Project Folder
 Create a folder named test_folder in the project directory.
@@ -51,16 +42,20 @@ Create a folder named test_folder in the project directory.
 This is the folder that will be monitored for changes.
 
 3️⃣ Run the Application
+
 ```bash
 python app.py
 ```
 ---
+
 4️⃣ View the Dashboard
+
 Open your browser and go to:
 
 http://127.0.0.1:5000
 
 ---
+
 The dashboard will auto-refresh every 5 seconds to display the latest changes.
 
 🧪 Testing the Monitor
